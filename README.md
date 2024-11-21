@@ -57,58 +57,81 @@ python manage.py createsuperuser
 python manage.py runserver
 
 ```
-🌐 API Qo'llanmasi
-Avtorizatsiya
-URL: /login/
-Method: POST
-Ma'lumot:
-{
-  "username": "user1",
-  "password": "securepassword"
-}
 
-Sayohat Yaratish
-URL: /trips/
-Method: POST
-Ma'lumot:
-{
-  "name": "Maldives Trip",
-  "description": "A relaxing trip to the Maldives",
-  "start_date": "2024-12-01",
-  "end_date": "2024-12-10"
-}
-
-Sayohatlar Ro'yxati
-URL: /trips/
-Method: GET
-
-🛡️ Xavfsizlik
-Token boshqaruvi: JWT tokenlarni yangilash va qora ro'yxatga olish.
-HTTPS: Ma'lumotlarni xavfsiz uzatish uchun shifrlangan ulanish.
-API Rate Limiting: API hujumlaridan himoyalanish.
-Parol xavfsizligi: Foydalanuvchi parollari bcrypt yoki argon2 yordamida shifrlanadi.
-👥 Loyihaga Hissa Qo'shish
-Hissa qo'shmoqchi bo'lsangiz:
-
-Loyiha kodini fork qiling.
-Yangi xususiyatlar yoki xatolarni tuzatish kiriting.
-Pull Request yuboring.
-📩 Muallif haqida
-Muallif: Izzatbek Ulkanov
-Telegram: @izzatbekulkanov
-Instagram: @izzatbekulkanov_
-
-📜 Litsenziya
-Loyiha MIT Litsenziyasi asosida tarqatiladi.
-
+# 🌐 API Qo'llanmasi
 
 ---
 
-### README haqida:
-1. **Mazmunli tarkib:** Loyiha imkoniyatlari, API tavsiflari, xavfsizlik va o'rnatish jarayoni bosqichma-bosqich ko'rsatib berilgan.
-2. **Format:** Emojilar, sarlavhalar va bo'limlar o'quvchiga qulay bo'lishi uchun ishlatilgan.
-3. **Mualliflik:** Sizning ism va ijtimoiy tarmoq ma'lumotlaringiz kiritilgan.
+## 1. Ro'yxatdan o'tish
+- **URL:** `/register/`  
+- **Method:** `POST`  
+- **Tavsif:** Foydalanuvchi yangi hisob yaratadi.  
+- **Ma'lumot:**
+```json
+{
+  "username": "newuser",
+  "email": "newuser@example.com",
+  "password": "strongpassword",
+  "full_name": "New User"
+}
+```
 
-Agar qo'shimcha o'zgarishlar kerak bo'lsa, bemalol ayting! 😊
+---
 
+## 2. Sayohatlar Ro'yxati
+- **URL:** `/trips/`  
+- **Method:** `GET`  
+- **Tavsif:** Foydalanuvchining barcha sayohatlarini ko'rish.  
+- **Javob:**
+```json
+[
+  {
+    "id": 1,
+    "name": "Maldives Trip",
+    "description": "A relaxing trip to the Maldives",
+    "start_date": "2024-12-01",
+    "end_date": "2024-12-10",
+    "friends": []
+  }
+]
+```
 
+---
+
+## 3. Sayohat Yaratish
+- **URL:** `/trips/`  
+- **Method:** `POST`  
+- **Tavsif:** Yangi sayohat yaratish.  
+- **Ma'lumot:**
+```json
+{
+  "name": "Adventure in Paris",
+  "description": "Exploring the beauty of Paris",
+  "start_date": "2025-01-15",
+  "end_date": "2025-01-20",
+  "friends": [2, 3]
+}
+```
+
+---
+
+## 🛡️ Xavfsizlik
+- **Token boshqaruvi:** JWT tokenlarni yangilash va qora ro'yxatga olish.
+- **HTTPS:** Ma'lumotlarni xavfsiz uzatish uchun shifrlangan ulanish.
+- **API Rate Limiting:** API hujumlaridan himoyalanish.
+- **Parol xavfsizligi:** Foydalanuvchi parollari `bcrypt` yoki `argon2` yordamida shifrlanadi.
+
+---
+
+## 👥 Loyihaga Hissa Qo'shish
+Hissa qo'shmoqchi bo'lsangiz:
+1. Loyiha kodini `fork` qiling.
+2. Yangi xususiyatlar yoki xatolarni tuzatish kiriting.
+3. `Pull Request` yuboring.
+
+---
+
+## 📩 Muallif haqida
+> **Muallif:** Izzatbek Ulkanov  
+> **Telegram:** [@izzatbekulkanov](https://t.me/izzatbekulkanov)  
+> **Instagram:** [@izzatbekulkanov_](https://instagram.com/izzatbekulkanov_)

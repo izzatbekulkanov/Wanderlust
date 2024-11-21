@@ -23,33 +23,6 @@
 - **Statik ma'lumotlar:**
   - Mamlakatlar, shaharlar va yashash darajalari haqidagi statik ma'lumotlar.
 
-### 🌐 API Interfeysi
-- **Ro'yxatdan o'tish va avtorizatsiya:**
-  - JWT token orqali autentifikatsiya.
-  - Ro'yxatdan o'tish, login va logout funksiyalari.
-- **Foydalanuvchi profili:**
-  - Ma'lumotlarni ko'rish va tahrirlash.
-  - Do'stlarni qo'shish va o'chirish.
-- **Sayohatlar:**
-  - Sayohat yaratish, kelajak va o'tgan sayohatlarni ajratish.
-- **Valyuta konvertatsiyasi:**
-  - API orqali valyuta kurslarini olish va hisoblash.
-- **Kalkulyatorlar:**
-  - Xarajatlarni hisoblash uchun moslashuvchan API.
-- **Bildirishnomalar:**
-  - Yangi sayohat, obuna yoki do'st qo'shilganida foydalanuvchilarga xabar yuborish.
-
----
-
-## ⚙️ Texnologiyalar
-| Texnologiya | Tavsif                          |
-|-------------|----------------------------------|
-| **Django**  | Backend uchun asosiy ramka      |
-| **SQLite**  | Ishlab chiqish bosqichi uchun DBMS |
-| **JWT**     | Foydalanuvchi autentifikatsiyasi |
-| **CORS**    | Frontend va backend integratsiyasi |
-| **Redis**   | Caching va bildirishnomalar     |
-
 ---
 
 ## 📋 O'rnatish Qo'llanmasi
@@ -82,3 +55,60 @@ python manage.py createsuperuser
 
 # 6. Serverni ishga tushirish:
 python manage.py runserver
+
+```
+🌐 API Qo'llanmasi
+Avtorizatsiya
+URL: /login/
+Method: POST
+Ma'lumot:
+{
+  "username": "user1",
+  "password": "securepassword"
+}
+
+Sayohat Yaratish
+URL: /trips/
+Method: POST
+Ma'lumot:
+{
+  "name": "Maldives Trip",
+  "description": "A relaxing trip to the Maldives",
+  "start_date": "2024-12-01",
+  "end_date": "2024-12-10"
+}
+
+Sayohatlar Ro'yxati
+URL: /trips/
+Method: GET
+
+🛡️ Xavfsizlik
+Token boshqaruvi: JWT tokenlarni yangilash va qora ro'yxatga olish.
+HTTPS: Ma'lumotlarni xavfsiz uzatish uchun shifrlangan ulanish.
+API Rate Limiting: API hujumlaridan himoyalanish.
+Parol xavfsizligi: Foydalanuvchi parollari bcrypt yoki argon2 yordamida shifrlanadi.
+👥 Loyihaga Hissa Qo'shish
+Hissa qo'shmoqchi bo'lsangiz:
+
+Loyiha kodini fork qiling.
+Yangi xususiyatlar yoki xatolarni tuzatish kiriting.
+Pull Request yuboring.
+📩 Muallif haqida
+Muallif: Izzatbek Ulkanov
+Telegram: @izzatbekulkanov
+Instagram: @izzatbekulkanov_
+
+📜 Litsenziya
+Loyiha MIT Litsenziyasi asosida tarqatiladi.
+
+
+---
+
+### README haqida:
+1. **Mazmunli tarkib:** Loyiha imkoniyatlari, API tavsiflari, xavfsizlik va o'rnatish jarayoni bosqichma-bosqich ko'rsatib berilgan.
+2. **Format:** Emojilar, sarlavhalar va bo'limlar o'quvchiga qulay bo'lishi uchun ishlatilgan.
+3. **Mualliflik:** Sizning ism va ijtimoiy tarmoq ma'lumotlaringiz kiritilgan.
+
+Agar qo'shimcha o'zgarishlar kerak bo'lsa, bemalol ayting! 😊
+
+

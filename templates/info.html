@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Ishlar Ro'yxati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/@tabler/icons@latest/iconfont/tabler-icons.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Backend Ishlar Ro'yxati</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-10 px-4">
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-database mr-2"></span> Ma'lumotlar Bazasi Modelli va Arxitekturasi
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Foydalanuvchilar: Profil, shaxsiy ma'lumotlar, parolni tiklash, do'stlar ro'yxati.</li>
+                <li>Sayohatlar: Sayohat nomi, tavsifi, shaharlar, sanalar, qo'shilgan do'stlar.</li>
+                <li>Obunalar: Obuna turlari va foydalanuvchilarning obuna holati.</li>
+                <li>Xaritalar: Geolokatsiya orqali joylashuvlar va tashrif belgilari.</li>
+                <li>Valyuta ma'lumotlari: API orqali yangilanadigan valyuta kurslari.</li>
+                <li>Kalkulyatorlar: Sayohat va yashash xarajatlari uchun hisoblash parametrlarini saqlash.</li>
+                <li>Statik ma'lumotlar: Mamlakatlar, shaharlar va yashash darajasi haqidagi statik ma'lumotlar.</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-api mr-2"></span> API Interfeysi
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Ro'yxatdan o'tish va avtorizatsiya: JWT yordamida autentifikatsiya.</li>
+                <li>Foydalanuvchi profili: Ma'lumotlarni ko'rish va tahrirlash, do'stlarni boshqarish.</li>
+                <li>Sayohatlar: Yaratish, o'zgartirish, o'chirish, kelajak va o'tgan sayohatlarni ajratish.</li>
+                <li>Xaritalar va geolokatsiya: Foydalanuvchining joylashuvini aniqlash, tashrif joylarini saqlash.</li>
+                <li>Valyuta konvertatsiyasi: API orqali valyuta kurslarini olish va hisoblash.</li>
+                <li>Kalkulyatorlar: Sayohat va yashash xarajatlarini hisoblash API'lari.</li>
+                <li>Bildirishnomalar: Yangi sayohat, obuna yoki do'st qo'shilganida bildirishnomalar yuborish.</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-arrows-left-right mr-2"></span> Integratsiyalar
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Valyuta API: Exchange Rates API orqali valyuta kurslarini olish.</li>
+                <li>Geolokatsiya API: Google Maps yoki OpenStreetMap API integratsiyasi.</li>
+                <li>To'lov tizimi: Obunalar uchun Yukassa kabi to'lov tizimi integratsiyasi.</li>
+                <li>Bildirishnoma tizimi: FCM yoki APNs orqali mobil bildirishnomalar.</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-shield-check mr-2"></span> Xavfsizlik
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Token boshqaruvi: JWT tokenlarni yangilash va qora ro'yxatga olish.</li>
+                <li>Ma'lumotlarning shifrlanishi: Parollarni shifrlash (bcrypt yoki argon2).</li>
+                <li>API xavfsizligi: Rate limiting, API kalitlari.</li>
+                <li>HTTPS ulanish: Ma'lumotlarni xavfsiz uzatish.</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-layout-dashboard mr-2"></span> Admin Paneli
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Foydalanuvchilarni boshqarish.</li>
+                <li>Sayohatlar, obunalar va boshqa ma'lumotlarni kuzatish.</li>
+                <li>Statik ma'lumotlarni boshqarish.</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-tools mr-2"></span> Texnologiyalar va Ramkalar
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Til va platforma: Node.js, Express.js yoki Nest.js ramkasi.</li>
+                <li>Ma'lumotlar ombori: MySQL.</li>
+                <li>Ma'lumotlar keshlash: Redis.</li>
+                <li>Testlash: Postman yoki Swagger yordamida API testlash.</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-600 flex items-center">
+                <span class="ti ti-bug mr-2"></span> Sinov va Disk Raskadrovka
+            </h2>
+            <ul class="list-disc list-inside mt-4 space-y-2">
+                <li>Backend funksionalligini to'liq testlash.</li>
+                <li>Har bir API uchun unit test va integratsion testlar.</li>
+                <li>Foydalanuvchi profillari, sayohatlar, kalkulyatorlar va obunalar uchun stress testlar.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Izzatbek Ulkanov</p>
+        </div>
+    </footer>
+
+</body>
+</html>
